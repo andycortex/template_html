@@ -147,6 +147,7 @@ Cierre con botón “×”.
 Secciones con submenús desplegables (mobile-menu-tree).
 
 Animaciones de apertura/cierre controladas por JavaScript.
+---
 
 ### 15. Tipografía
 
@@ -168,6 +169,7 @@ Texto pequeño (.text-small).
 Variantes de tamaño: .text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl.
 
 Estilos para enlaces (.link, .link-muted).
+---
 
 ### 16. Spinners de Carga
 
@@ -184,6 +186,7 @@ spinner-primary.
 
 spinner-secondary.
 Incluye: Botones con estado de carga (.btn-loading).
+---
 
 ### 17. Componentes de Utilidad
 
@@ -199,6 +202,7 @@ Flexbox con alineaciones (.flex, .justify-between, .items-center).
 Divisores (.divider, .divider-dashed, .divider-thick).
 
 Variantes de Paper (.paper-sm, .paper, .paper-lg, .paper-elevated).
+---
 
 ### 18. Tooltips
 
@@ -212,6 +216,7 @@ Inferior (.tooltip-bottom).
 Izquierda (.tooltip-left).
 
 Derecha (.tooltip-right).
+---
 
 ### 19. Sistema de Notificaciones (Snackbars)
 
@@ -229,6 +234,7 @@ Información (info).
 Debug (debug).
 
 Crítico (critical).
+---
 
 ## 🚀 Uso
 1. Copia el HTML del componente que necesites.
