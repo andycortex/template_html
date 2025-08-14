@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleber - AI Development Platform</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <kleber-header></kleber-header>
+
+        <kleber-jumbotron
+          title="Boost your business with AI"
+          description="Discover our complete suite of AI tools designed to transform the way you work and make business decisions."
+        ></kleber-jumbotron>
+        <main>
+            <div class="products-grid">
+                <kleber-product-card
+                badge="Popular"
+                icon="👁️"
+                title="Neural Vision Pro"
+                category="Visión Artificial"
+                description="Reconocimiento de imágenes avanzado con IA para análisis visual en tiempo real"
+                rating="4.8"
+                stars="★★★★★"
+                features="Detección de objetos; Análisis facial; OCR avanzado"
+                price="$299"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+              <kleber-product-card
+                icon="🤖"
+                title="ChatBot Enterprise"
+                category="Procesamiento de Lenguaje"
+                description="Asistente conversacional inteligente para atención al cliente 24/7"
+                rating="4.9"
+                stars="★★★★★"
+                features="Multiidioma; Integración API; Analytics avanzado"
+                price="$199"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+              <kleber-product-card
+                badge="Popular"
+                icon="🧠"
+                title="AutoML Studio"
+                category="Machine Learning"
+                description="Plataforma de machine learning automatizado sin código"
+                rating="4.7"
+                stars="★★★★★"
+                features="Drag & Drop; Auto-optimización; Deploy automático"
+                price="$499"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+              <kleber-product-card
+                icon="⚡"
+                title="Predictive Analytics"
+                category="Analytics"
+                description="Análisis predictivo para toma de decisiones empresariales"
+                rating="4.6"
+                stars="★★★★☆"
+                features="Forecasting; Anomaly detection; Real-time insights"
+                price="$399"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+              <kleber-product-card
+                badge="Popular"
+                icon="💻"
+                title="AI Code Assistant"
+                category="Desarrollo"
+                description="Asistente de programación con IA para desarrollo más eficiente"
+                rating="4.9"
+                stars="★★★★★"
+                features="Code completion; Bug detection; Refactoring"
+                price="$149"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+              <kleber-product-card
+                icon="🌐"
+                title="Smart Translator"
+                category="Traducción"
+                description="Traductor neuronal con contexto y adaptación cultural"
+                rating="4.5"
+                stars="★★★★☆"
+                features="120+ idiomas; Contexto cultural; API REST"
+                price="$99"
+                period="/mes"
+                button-text="Probar Ahora"
+              ></kleber-product-card>
+              
+            </div>
+        </main>
+        
+    </div>
+    <script src="components/header.js"></script>
+    <script src="components/jumbotron.js"></script>
+    <script src="components/card_product.js"></script>
+</body>
+</html>

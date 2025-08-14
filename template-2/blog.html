@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kleber - AI Development Platform</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <kleber-header></kleber-header>
+      <kleber-jumbotron title="Latest Insights" description="Discover the latest trends in technology, AI, and development"></kleber-jumbotron>
+      <main class="blog-main">
+        <div class="blog-grid">
+          <kleber-article
+            title="The Future of AI Development"
+            content="Exploring how artificial intelligence is reshaping the way we build applications and solve complex problems in modern software development."
+            author="Sarah Johnson"
+            date="Dec 15, 2024"
+            read-time="5 min read"
+            category="Featured"
+            icon="📊"
+          >
+          </kleber-article>
+
+          <kleber-article
+            title="Building Scalable Web Components"
+            content="Learn how to create reusable, maintainable web components that scale across large applications."
+            author="Mike Chen"
+            date="Dec 12, 2024"
+            read-time="3 min read"
+            category="Technology"
+            icon="🚀"
+          >
+          </kleber-article>
+
+          <kleber-article
+            title="Modern UI Design Principles"
+            content="Essential design principles for creating beautiful and functional user interfaces in 2024."
+            author="Emma Davis"
+            date="Dec 10, 2024"
+            read-time="4 min read"
+            category="Design"
+            icon="🎨"
+          >
+          </kleber-article>
+
+          <kleber-article
+            title="Optimizing JavaScript Performance"
+            content="Practical tips and techniques for improving JavaScript performance in modern web applications."
+            author="Alex Rodriguez"
+            date="Dec 8, 2024"
+            read-time="6 min read"
+            category="Performance"
+            icon="⚡"
+          >
+          </kleber-article>
+
+          <kleber-article
+            title="Web Security Best Practices"
+            content="Essential security measures every developer should implement to protect their applications."
+            author="Lisa Wang"
+            date="Dec 5, 2024"
+            read-time="7 min read"
+            category="Security"
+            icon="🔒"
+          >
+          </kleber-article>
+
+          <kleber-article
+            title="Responsive Design Strategies"
+            content="Creating seamless experiences across all devices with modern responsive design techniques."
+            author="David Kim"
+            date="Dec 3, 2024"
+            read-time="5 min read"
+            category="Mobile"
+            icon="📱"
+          >
+          </kleber-article>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="blog-load-more-section">
+          <button class="blog-load-more-btn">Load More Articles</button>
+        </div>
+      </main>
+    </div>
+    <script src="components/header.js"></script>
+    <script src="components/article.js"></script>
+    <script src="components/jumbotron.js"></script>
+  </body>
+</html>
