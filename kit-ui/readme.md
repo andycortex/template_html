@@ -134,6 +134,102 @@ Contenedor con contenido extenso y barra de desplazamiento personalizada.
 
 ---
 
+### 14. Menú Móvil (Mobile Menu)
+
+**Descripción:**
+Menú de navegación adaptable para dispositivos móviles, con botón tipo "hamburguesa" para abrir/cerrar.
+Características:
+
+Botón de apertura con tres líneas (burger-button).
+
+Cierre con botón “×”.
+
+Secciones con submenús desplegables (mobile-menu-tree).
+
+Animaciones de apertura/cierre controladas por JavaScript.
+
+### 15. Tipografía
+
+**Descripción:** Sistema completo de jerarquía tipográfica.
+Elementos:
+
+Títulos (h1, h2, h3).
+
+Subtítulos (.subtitle).
+
+Encabezados (.heading).
+
+Párrafos (.paragraph).
+
+Texto secundario (.text-muted).
+
+Texto pequeño (.text-small).
+
+Variantes de tamaño: .text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl.
+
+Estilos para enlaces (.link, .link-muted).
+
+### 16. Spinners de Carga
+
+**Descripción:** Indicadores de carga con diferentes tamaños y estilos.
+Variantes:
+
+spinner-sm (pequeño).
+
+spinner (normal).
+
+spinner-lg (grande).
+
+spinner-primary.
+
+spinner-secondary.
+Incluye: Botones con estado de carga (.btn-loading).
+
+### 17. Componentes de Utilidad
+
+**Descripción:** Bloques de estructura para maquetar contenido.
+Incluye:
+
+Contenedores (.container-sm, .container-md).
+
+Sistema de Grid (.grid, .grid-cols-X).
+
+Flexbox con alineaciones (.flex, .justify-between, .items-center).
+
+Divisores (.divider, .divider-dashed, .divider-thick).
+
+Variantes de Paper (.paper-sm, .paper, .paper-lg, .paper-elevated).
+
+### 18. Tooltips
+
+**Descripción:** Mensajes flotantes que aparecen al pasar el cursor sobre un elemento.
+Posiciones:
+
+Superior (.tooltip-top).
+
+Inferior (.tooltip-bottom).
+
+Izquierda (.tooltip-left).
+
+Derecha (.tooltip-right).
+
+### 19. Sistema de Notificaciones (Snackbars)
+
+**Descripción:** Mensajes de alerta temporales para mostrar información al usuario.
+Tipos:
+
+Éxito (success).
+
+Error (error).
+
+Advertencia (warning).
+
+Información (info).
+
+Debug (debug).
+
+Crítico (critical).
+
 ## 🚀 Uso
 1. Copia el HTML del componente que necesites.
 2. Importa `main.css`.

@@ -3,15 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitUI - Paleta de Colores Personalizada</title>
+    <title>KitUI - Sistema de Componentes Completo</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/anka-coder" type="text/css"/>
 </head>
 <body>
     <div class="container">
+        <div class="mobile-menu-container">
+            <button class="burger-button" id="burgerButton">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-header">
+                    <h3 class="mobile-menu-title">Menú</h3>
+                    <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+                </div>
+                <nav class="mobile-menu-nav">
+                    <a href="#" class="mobile-menu-item active">
+                        🏠 Inicio
+                    </a>
+                    <a href="#" class="mobile-menu-item">
+                        🎨 Componentes
+                        <button class="mobile-menu-toggle" onclick="toggleSubmenu('components')">▼</button>
+                    </a>
+                    <div class="mobile-menu-tree" id="components">
+                        <a href="#typography" class="mobile-menu-item">Tipografía</a>
+                        <a href="#buttons" class="mobile-menu-item">Botones</a>
+                        <a href="#forms" class="mobile-menu-item">Formularios</a>
+                        <a href="#navigation" class="mobile-menu-item">Navegación</a>
+                    </div>
+                    <a href="#" class="mobile-menu-item">
+                        🛠️ Utilidades
+                        <button class="mobile-menu-toggle" onclick="toggleSubmenu('utilities')">▼</button>
+                    </a>
+                    <div class="mobile-menu-tree" id="utilities">
+                        <a href="#containers" class="mobile-menu-item">Contenedores</a>
+                        <a href="#layout" class="mobile-menu-item">Layout</a>
+                        <a href="#spacing" class="mobile-menu-item">Espaciado</a>
+                    </div>
+                    <a href="#" class="mobile-menu-item">
+                        📱 Contacto
+                    </a>
+                </nav>
+            </div>
+        </div>
+
         <header class="header">
-            <h1>KitUI Showcase</h1>
-            <p>Componentes con paleta de colores personalizada</p>
+            <h1 class="title">KitUI Sistema Completo</h1>
+            <p class="text-muted">Biblioteca de componentes con todos los elementos esenciales</p>
         </header>
+        <section class="paper" id="typography">
+            <h2 class="subtitle">🔤 Sistema de Tipografía</h2>
+            <p class="text-muted">Diferentes tamaños y estilos de texto para jerarquía visual</p>
+            <div class="divider"></div>
+            
+            <div class="grid grid-cols-2 gap-6">
+                <div>
+                    <h1 class="title">Título Principal</h1>
+                    <h2 class="subtitle">Subtítulo</h2>
+                    <h3 class="heading">Encabezado</h3>
+                    <p class="paragraph">Este es un párrafo normal con el tamaño base de texto. Perfecto para contenido principal y lectura cómoda.</p>
+                    <p class="text-muted">Texto secundario o explicativo</p>
+                    <p class="text-small">Texto pequeño para notas o información adicional</p>
+                </div>
+                <div>
+                    <h4 class="heading">Enlaces y Variantes</h4>
+                    <p class="paragraph">
+                        Aquí tienes un <a href="#" class="link">enlace normal</a> y también un 
+                        <a href="#" class="link-muted">enlace secundario</a> para diferentes contextos.
+                    </p>
+                    <div class="flex flex-col gap-2">
+                        <span class="text-xs">Texto extra pequeño (xs)</span>
+                        <span class="text-sm">Texto pequeño (sm)</span>
+                        <span class="text-base">Texto base</span>
+                        <span class="text-lg">Texto grande (lg)</span>
+                        <span class="text-xl">Texto extra grande (xl)</span>
+                        <span class="text-2xl">Texto 2xl</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="paper">
+            <h2 class="subtitle">⏳ Spinners de Carga</h2>
+            <p class="text-muted">Indicadores de carga en diferentes tamaños y colores</p>
+            <div class="divider"></div>
+            
+            <div class="flex items-center gap-6 flex-wrap">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="spinner spinner-sm"></div>
+                    <span class="text-small">Pequeño</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="spinner"></div>
+                    <span class="text-small">Normal</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="spinner spinner-lg"></div>
+                    <span class="text-small">Grande</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="spinner spinner-primary"></div>
+                    <span class="text-small">Primario</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="spinner spinner-secondary"></div>
+                    <span class="text-small">Secundario</span>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            <h3 class="heading">Botones con Estado de Carga</h3>
+            <div class="flex gap-4 flex-wrap">
+                <button class="btn btn-primary">Normal</button>
+                <button class="btn btn-primary btn-loading">Cargando</button>
+                <button class="btn btn-accent btn-loading">Procesando</button>
+            </div>
+        </section>
+        <section class="paper" id="utilities">
+            <h2 class="subtitle">🛠️ Componentes de Utilidad</h2>
+            <p class="text-muted">Contenedores, columnas, filas, divisores y papers</p>
+            <div class="divider"></div>
+            
+            <h3 class="heading">Contenedores</h3>
+            <div class="container-sm paper-sm">
+                <p class="text-sm">Contenedor pequeño (640px max)</p>
+            </div>
+            <div class="container-md paper-sm">
+                <p class="text-sm">Contenedor mediano (768px max)</p>
+            </div>
+            
+            <div class="divider"></div>
+            <h3 class="heading">Sistema de Grid</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="paper-sm">Columna 1</div>
+                <div class="paper-sm">Columna 2</div>
+                <div class="paper-sm">Columna 3</div>
+            </div>
+            
+            <div class="divider"></div>
+            <h3 class="heading">Flexbox</h3>
+            <div class="flex justify-between items-center paper-sm">
+                <span>Inicio</span>
+                <span>Centro</span>
+                <span>Final</span>
+            </div>
+            
+            <div class="divider-thick"></div>
+            <h3 class="heading">Tipos de Divisores</h3>
+            <p class="text-sm">Divisor normal arriba ↑</p>
+            <div class="divider-dashed"></div>
+            <p class="text-sm">Divisor punteado arriba ↑</p>
+            
+            <div class="divider"></div>
+            <h3 class="heading">Variantes de Paper</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="paper-sm">Paper pequeño</div>
+                <div class="paper">Paper normal</div>
+                <div class="paper-lg">Paper grande</div>
+                <div class="paper-elevated">Paper elevado</div>
+            </div>
+        </section>
+        <section class="paper">
+            <h2 class="subtitle">💬 Tooltips</h2>
+            <p class="text-muted">Información contextual al pasar el cursor</p>
+            <div class="divider"></div>
+            
+            <div class="flex gap-6 flex-wrap items-center">
+                <div class="tooltip-container">
+                    <button class="btn btn-primary">Hover arriba</button>
+                    <div class="tooltip tooltip-top">Información útil aquí</div>
+                </div>
+                
+                <div class="tooltip-container">
+                    <button class="btn btn-secondary">Hover abajo</button>
+                    <div class="tooltip tooltip-bottom">Tooltip en la parte inferior</div>
+                </div>
+                
+                <div class="tooltip-container">
+                    <button class="btn btn-accent">Hover izquierda</button>
+                    <div class="tooltip tooltip-left">A la izquierda</div>
+                </div>
+                
+                <div class="tooltip-container">
+                    <button class="btn btn-outline">Hover derecha</button>
+                    <div class="tooltip tooltip-right">A la derecha</div>
+                </div>
+            </div>
+        </section>
+        <section class="paper">
+            <h2 class="subtitle">🔔 Sistema de Notificaciones (Snackbars)</h2>
+            <p class="text-muted">Mensajes de alerta con diferentes niveles de importancia</p>
+            <div class="divider"></div>
+            
+            <div class="flex gap-3 flex-wrap">
+                <button class="btn btn-primary" onclick="showSnackbar('success')">Éxito</button>
+                <button class="btn btn-secondary" onclick="showSnackbar('error')">Error</button>
+                <button class="btn btn-accent" onclick="showSnackbar('warning')">Advertencia</button>
+                <button class="btn btn-ghost" onclick="showSnackbar('info')">Información</button>
+                <button class="btn btn-accent" onclick="showSnackbar('debug')">Debug</button>
+                <button class="btn btn-secondary" onclick="showSnackbar('critical')">Crítico</button>
+            </div>
+        </section>
         <section class="card">
             <div class="card-header">
                 <h2>Paleta de Colores</h2>
@@ -47,6 +242,7 @@
                 </div>
             </div>
         </section>
+
         <section class="card">
             <div class="card-header">
                 <h2>Botones</h2>
@@ -62,6 +258,7 @@
                 </div>
             </div>
         </section>
+
         <div class="grid-two">
             <section class="card">
                 <div class="card-header">
@@ -100,6 +297,7 @@
                 </div>
             </section>
         </div>
+
         <section class="card">
             <div class="card-header">
                 <h2>Estadísticas</h2>
@@ -126,6 +324,7 @@
                 </div>
             </div>
         </section>
+
         <section class="card">
             <div class="card-header">
                 <h2>Componentes de Formulario Avanzados</h2>
@@ -342,10 +541,84 @@
             </div>
         </section>
         <footer class="footer">
-            <p>Página de KitUI </p>
+            <p>KitUI - Sistema de Componentes Completo</p>
         </footer>
     </div>
+    <div class="snackbar-container" id="snackbarContainer"></div>
+
     <script>
+        const burgerButton = document.getElementById('burgerButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function toggleMobileMenu() {
+            burgerButton.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        burgerButton.addEventListener('click', toggleMobileMenu);
+        mobileMenuClose.addEventListener('click', toggleMobileMenu);
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !burgerButton.contains(e.target)) {
+                burgerButton.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            const toggle = event.target;
+            
+            submenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        const snackbarMessages = {
+            success: { title: 'Éxito', message: 'Operación completada correctamente', icon: '✅' },
+            error: { title: 'Error', message: 'Ha ocurrido un error inesperado', icon: '❌' },
+            warning: { title: 'Advertencia', message: 'Revisa la información antes de continuar', icon: '⚠️' },
+            info: { title: 'Información', message: 'Aquí tienes información importante', icon: 'ℹ️' },
+            debug: { title: 'Debug', message: 'Información de depuración para desarrolladores', icon: '🐛' },
+            critical: { title: 'Crítico', message: 'Atención inmediata requerida', icon: '🚨' }
+        };
+
+        function showSnackbar(type) {
+            const container = document.getElementById('snackbarContainer');
+            const config = snackbarMessages[type];
+            
+            const snackbar = document.createElement('div');
+            snackbar.className = `snackbar snackbar-${type}`;
+            
+            snackbar.innerHTML = `
+                <span class="snackbar-icon">${config.icon}</span>
+                <div class="snackbar-content">
+                    <div class="snackbar-title">${config.title}</div>
+                    <div class="snackbar-message">${config.message}</div>
+                </div>
+                <button class="snackbar-close" onclick="closeSnackbar(this)">×</button>
+            `;
+            
+            container.appendChild(snackbar);
+            
+            setTimeout(() => {
+                snackbar.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                closeSnackbar(snackbar.querySelector('.snackbar-close'));
+            }, 5000);
+        }
+
+        function closeSnackbar(button) {
+            const snackbar = button.closest('.snackbar');
+            snackbar.classList.remove('show');
+            
+            setTimeout(() => {
+                snackbar.remove();
+            }, 300);
+        }
+
         function openModal() {
             document.getElementById('modal').style.display = 'flex';
         }
@@ -353,6 +626,7 @@
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
+
         window.onclick = function(event) {
             const modal = document.getElementById('modal');
             if (event.target === modal) {
