@@ -1,243 +1,182 @@
-# KitUI – Documentación de Componentes
+# KitUI - Sistema de Componentes Completo
 
-Este repositorio incluye componentes HTML/CSS listos para usar, cada uno con estilos independientes definidos en `main.css`.  
-No dependen de clases globales, frameworks externos ni librerías adicionales.
+Bienvenido a KitUI, una biblioteca de componentes de interfaz de usuario creada con HTML y CSS puro. Este kit está diseñado para ser intuitivo, personalizable y fácil de integrar en cualquier proyecto web.
+
+## Filosofía
+
+KitUI se basa en los siguientes principios:
+
+- **Variables de CSS:** La personalización es clave. Casi todos los aspectos del diseño (colores, espaciado, bordes, sombras) se controlan a través de variables de CSS para que puedas adaptar el tema fácilmente.
+- **Clases de Utilidad:** Inspirado en frameworks como Tailwind CSS, KitUI ofrece clases de utilidad para flexbox, grid y espaciado, permitiendo construir layouts complejos sin escribir CSS personalizado.
+- **Componentes Modulares:** Cada componente está diseñado como un bloque de construcción independiente y reutilizable.
+
+## Archivos Principales
+
+- `index.html`: Contiene ejemplos de todos los componentes disponibles. Es el mejor lugar para verlos en acción.
+- `main.css`: El corazón de la biblioteca. Contiene todas las variables, estilos base y clases de los componentes.
+- `main.js`: Gestiona la interactividad de componentes como el menú móvil, los snackbars y los modales.
 
 ---
 
-## 📦 Componentes
+## Personalización (Theming)
 
-### 1. Paleta de Colores
-**Descripción:**  
-Muestra los colores base del proyecto con nombre y código HEX.  
-**Características:**
-- Colores definidos: `primary`, `secondary`, `accent`, `bg`, `text-muted`.
-- Cada color se presenta en un bloque visual.
+Para cambiar el tema de KitUI, simplemente sobrescribe las variables de CSS definidas en la sección `:root` de `main.css`.
+
+### Variables Principales
+
+```css
+:root {
+  /* Paleta de Colores */
+  --color-secondary: #ebe1ba;
+  --color-primary: #fb4934;
+  --color-bg: #1d2021;
+  --color-accent: #458588;
+  --color-text-muted: #665c54;
+  --color-card: #282828;
+  --color-border: #504945;
+  --color-input: #3c3836;
+
+  /* Bordes y Radios */
+  --border: 1px solid var(--color-border);
+  --radius-md: 8px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+
+  /* Tipografía */
+  --font-mono: 'Anka/Coder', monospace;
+}
+```
 
 ---
+
+## Componentes
+
+A continuación se detallan los componentes principales y cómo utilizarlos.
+
+### 1. Tipografía
+
+KitUI ofrece un sistema de tipografía completo para mantener la jerarquía visual.
+
+- `.title`: Título principal (h1).
+- `.subtitle`: Subtítulo (h2).
+- `.heading`: Encabezado de sección (h3).
+- `.paragraph`: Texto de párrafo estándar.
+- `.text-muted`: Texto secundario o de apoyo.
+- `.text-small`: Texto pequeño para notas.
+- `.link`: Enlace estándar.
 
 ### 2. Botones
-**Descripción:**  
-Conjunto de botones estilizados para diferentes acciones.  
-**Variantes:**
-- Botón primario.
-- Botón secundario.
-- Botón outline.
-- Botón ghost.
-- Botón accent.
+
+Los botones vienen en varias variantes y soportan un estado de carga.
+
+**Clases:**
+- `.btn`: Clase base.
+- `.btn-primary`: Botón principal.
+- `.btn-secondary`: Botón secundario.
+- `.btn-accent`: Botón con color de acento.
+- `.btn-outline`: Botón con borde.
+- `.btn-ghost`: Botón transparente.
+- `.btn-loading`: Añadir para mostrar un spinner de carga (requiere JS para la lógica).
+
+**Ejemplo:**
+```html
+<button class="btn btn-primary">Botón Primario</button>
+<button class="btn btn-outline">Botón Outline</button>
+<button class="btn btn-accent btn-loading">Cargando...</button>
+```
+
+### 3. Formularios
+
+Componentes para crear formularios interactivos.
+
+- **Inputs:** `.input`
+- **Textareas:** `.textarea`
+- **Selects:** `.select`
+- **Checkboxes:** Se construyen con una estructura específica para permitir estilos personalizados.
+- **Radios:** Similar a los checkboxes.
+
+**Ejemplo de Checkbox:**
+```html
+<label class="checkbox-label">
+    <input type="checkbox" class="checkbox" checked>
+    <span class="checkbox-custom"></span>
+    Opción
+</label>
+```
+
+### 4. Cards
+
+Contenedores flexibles para mostrar contenido agrupado.
+
+**Clases:**
+- `.card`: Contenedor principal.
+- `.card-header`: Sección de la cabecera.
+- `.card-content`: Sección del cuerpo.
+- `.card-description`: Texto descriptivo en la cabecera.
+
+**Ejemplo:**
+```html
+<div class="card">
+    <div class="card-header">
+        <h2>Título de la Card</h2>
+        <p class="card-description">Descripción opcional.</p>
+    </div>
+    <div class="card-content">
+        <p>Contenido de la card.</p>
+    </div>
+</div>
+```
+
+### 5. Notificaciones (Snackbars)
+
+Mensajes emergentes para notificar al usuario. Se controlan con JavaScript.
+
+**Clases de Estado:**
+- `.snackbar-success`
+- `.snackbar-error`
+- `.snackbar-warning`
+- `.snackbar-info`
+
+**Uso (JS):**
+Llama a la función `showSnackbar('success')` para mostrar una notificación. El contenedor `.snackbar-container` debe existir en el HTML.
+
+### 6. Modales
+
+Ventanas emergentes que requieren la atención del usuario. Se controlan con JavaScript.
+
+**Estructura HTML:**
+```html
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Título del Modal</h3>
+            <button class="modal-close" onclick="closeModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <p>Contenido del modal.</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary">Confirmar</button>
+                <button class="btn btn-ghost" onclick="closeModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+**Uso (JS):**
+Llama a `openModal()` y `closeModal()` para gestionar la visibilidad.
+
+### 7. Layout y Utilidades
+
+- **Contenedores:** `.container`, `.container-sm`, `.container-md`.
+- **Grid:** `.grid`, `.grid-cols-2`, `.grid-cols-3`, etc.
+- **Flexbox:** `.flex`, `.flex-col`, `.items-center`, `.justify-between`, etc.
+- **Espaciado:** `.gap-4`, `.gap-6`, etc., para el espaciado en grid y flexbox.
+- **Divisores:** `.divider`, `.divider-dashed`, `.divider-thick`.
 
 ---
 
-### 3. Tarjeta Destacada
-**Descripción:**  
-Tarjeta de presentación con imagen, texto descriptivo y barra de progreso.  
-**Características:**
-- Imagen o avatar.
-- Nombre y rol.
-- Texto de proyecto.
-- Barra de progreso con porcentaje.
+## Responsive
 
----
-
-### 4. Formulario de Contacto
-**Descripción:**  
-Formulario simple para envío de mensajes.  
-**Campos incluidos:**
-- Nombre.
-- Correo electrónico.
-- Mensaje.
-- Botón de envío.
-
----
-
-### 5. Estadísticas
-**Descripción:**  
-Bloque de métricas clave en formato compacto.  
-**Ejemplos de métricas:**
-- Usuarios activos.
-- Proyectos.
-- Satisfacción.
-- Soporte.
-
----
-
-### 6. Formulario Avanzado
-**Descripción:**  
-Incluye elementos de formulario adicionales.  
-**Elementos:**
-- Select desplegable.
-- Casillas de verificación (checkboxes).
-- Botones de radio.
-
----
-
-### 7. Navegación
-**Descripción:**  
-Componentes de navegación para moverse dentro de la aplicación.  
-**Incluye:**
-- Menú principal.
-- Breadcrumbs.
-- Paginación.
-
----
-
-### 8. Modal
-**Descripción:**  
-Ventana modal emergente para mostrar información o confirmar acciones.  
-**Características:**
-- Botón para abrir.
-- Cierre con botón interno o clic fuera.
-- Controlado por JavaScript (`openModal`, `closeModal`).
-
----
-
-### 9. Barras de Progreso
-**Descripción:**  
-Indicadores visuales de avance.  
-**Características:**
-- Varias longitudes y colores.
-- Texto opcional con porcentaje.
-
----
-
-### 10. Lista de Iconos
-**Descripción:**  
-Lista de iconos para representar acciones o categorías.  
-**Formato:**
-- Disposición horizontal o vertical.
-- Soporte para SVG o icon fonts.
-
----
-
-### 11. Listas
-**Descripción:**  
-Elementos ordenados o no ordenados para mostrar datos.  
-**Tipos:**
-- Lista ordenada (`<ol>`).
-- Lista no ordenada (`<ul>`).
-
----
-
-### 12. Tablas
-**Descripción:**  
-Tabla para mostrar datos estructurados.  
-**Características:**
-- Cabecera con títulos.
-- Filas con estado y acciones.
-- Diseño responsive.
-
----
-
-### 13. Área con Scroll
-**Descripción:**  
-Contenedor con contenido extenso y barra de desplazamiento personalizada.
-
----
-
-### 14. Menú Móvil (Mobile Menu)
-
-**Descripción:**
-Menú de navegación adaptable para dispositivos móviles, con botón tipo "hamburguesa" para abrir/cerrar.
-Características:
-
-Botón de apertura con tres líneas (burger-button).
-
-Cierre con botón “×”.
-
-Secciones con submenús desplegables (mobile-menu-tree).
-
-Animaciones de apertura/cierre controladas por JavaScript.
----
-
-### 15. Tipografía
-
-**Descripción:** Sistema completo de jerarquía tipográfica.
-Elementos:
-
-Títulos (h1, h2, h3).
-
-Subtítulos (.subtitle).
-
-Encabezados (.heading).
-
-Párrafos (.paragraph).
-
-Texto secundario (.text-muted).
-
-Texto pequeño (.text-small).
-
-Variantes de tamaño: .text-xs, .text-sm, .text-base, .text-lg, .text-xl, .text-2xl.
-
-Estilos para enlaces (.link, .link-muted).
----
-
-### 16. Spinners de Carga
-
-**Descripción:** Indicadores de carga con diferentes tamaños y estilos.
-Variantes:
-
-spinner-sm (pequeño).
-
-spinner (normal).
-
-spinner-lg (grande).
-
-spinner-primary.
-
-spinner-secondary.
-Incluye: Botones con estado de carga (.btn-loading).
----
-
-### 17. Componentes de Utilidad
-
-**Descripción:** Bloques de estructura para maquetar contenido.
-Incluye:
-
-Contenedores (.container-sm, .container-md).
-
-Sistema de Grid (.grid, .grid-cols-X).
-
-Flexbox con alineaciones (.flex, .justify-between, .items-center).
-
-Divisores (.divider, .divider-dashed, .divider-thick).
-
-Variantes de Paper (.paper-sm, .paper, .paper-lg, .paper-elevated).
----
-
-### 18. Tooltips
-
-**Descripción:** Mensajes flotantes que aparecen al pasar el cursor sobre un elemento.
-Posiciones:
-
-Superior (.tooltip-top).
-
-Inferior (.tooltip-bottom).
-
-Izquierda (.tooltip-left).
-
-Derecha (.tooltip-right).
----
-
-### 19. Sistema de Notificaciones (Snackbars)
-
-**Descripción:** Mensajes de alerta temporales para mostrar información al usuario.
-Tipos:
-
-Éxito (success).
-
-Error (error).
-
-Advertencia (warning).
-
-Información (info).
-
-Debug (debug).
-
-Crítico (critical).
----
-
-## 🚀 Uso
-1. Copia el HTML del componente que necesites.
-2. Importa `main.css`.
-3. Pega el componente en tu proyecto: funcionará sin dependencias.
-
+El diseño es "mobile-first". La mayoría de los estilos para escritorio se aplican a partir de un breakpoint de `768px`. El menú de navegación principal se oculta en móvil y se reemplaza por un menú de hamburguesa (`.burger-button`).
