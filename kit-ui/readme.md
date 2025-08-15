@@ -177,11 +177,41 @@ Llama a `openModal()` y `closeModal()` para gestionar la visibilidad.
 
 ### 7. Layout y Utilidades
 
-- **Contenedores:** `.container`, `.container-sm`, `.container-md`.
-- **Grid:** `.grid`, `.grid-cols-2`, `.grid-cols-3`, etc.
-- **Flexbox:** `.flex`, `.flex-col`, `.items-center`, `.justify-between`, etc.
-- **Espaciado:** `.gap-4`, `.gap-6`, etc., para el espaciado en grid y flexbox.
-- **Divisores:** `.divider`, `.divider-dashed`, `.divider-thick`.
+KitUI proporciona una serie de clases de utilidad para construir layouts y aplicar estilos de forma granular.
+
+- **Contenedores:**
+    - `.container`: Contenedor principal con ancho máximo.
+    - `.container-sm`, `.container-md`, `.container-lg`, `.container-xl`: Contenedores con anchos máximos específicos.
+    - `.container-fluid`: Contenedor de ancho completo.
+
+- **Flexbox:**
+    - `.flex`: Habilita un contexto flex.
+    - `.flex-col`, `.flex-row`: Dirección del flex.
+    - `.flex-wrap`: Permite que los ítems se envuelvan.
+    - `.items-center`, `.items-start`, `.items-end`: Alineación de ítems en el eje cruzado.
+    - `.justify-center`, `.justify-between`, `.justify-around`, `.justify-start`, `.justify-end`: Alineación de ítems en el eje principal.
+
+- **Grid:**
+    - `.grid`: Habilita un contexto grid.
+    - `.grid-cols-1`, `.grid-cols-2`, `.grid-cols-3`, `.grid-cols-4`: Define el número de columnas.
+
+- **Espaciado (Gaps):**
+    - `.gap-1`, `.gap-2`, `.gap-3`, `.gap-4`, `.gap-6`, `.gap-8`: Espaciado entre ítems en flex o grid.
+
+- **Divisores:**
+    - `.divider`: Divisor horizontal estándar.
+    - `.divider-vertical`: Divisor vertical.
+    - `.divider-thick`: Divisor horizontal más grueso.
+    - `.divider-dashed`: Divisor horizontal punteado.
+
+- **Papers (Contenedores con Estilo):**
+    - `.paper`: Contenedor con estilo de tarjeta y sombra ligera.
+    - `.paper-sm`, `.paper-lg`, `.paper-xl`: Variantes de tamaño de padding.
+    - `.paper-flat`: Sin sombra.
+    - `.paper-elevated`: Con sombra más pronunciada.
+
+- **Tamaños de Texto:**
+    - `.text-xs`, `.text-sm`, `.text-base`, `.text-lg`, `.text-xl`, `.text-2xl`, `.text-3xl`, `.text-4xl`, `.text-5xl`: Clases para aplicar diferentes tamaños de fuente.
 
 ---
 
