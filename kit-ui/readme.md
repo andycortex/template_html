@@ -94,8 +94,8 @@ Componentes para crear formularios interactivos.
 - **Inputs:** `.input`
 - **Textareas:** `.textarea`
 - **Selects:** `.select`
-- **Checkboxes:** Se construyen con una estructura específica para permitir estilos personalizados.
-- **Radios:** Similar a los checkboxes.
+- **Checkboxes:** `checkbox`
+- **Radios:** `radio`
 
 **Ejemplo de Checkbox:**
 ```html
@@ -145,6 +145,14 @@ Llama a la función `showSnackbar('success')` para mostrar una notificación. El
 ### 6. Modales
 
 Ventanas emergentes que requieren la atención del usuario. Se controlan con JavaScript.
+
+**Clases:**
+- `.modal`: El contenedor de fondo oscuro que cubre toda la pantalla.
+- `.modal-content`: La ventana de diálogo principal.
+- `.modal-header`: La cabecera del modal, para el título y el botón de cierre.
+- `.modal-body`: El área de contenido principal.
+- `.modal-actions`: El pie del modal, para los botones de acción.
+- `.modal-close`: El botón para cerrar el modal.
 
 **Estructura HTML:**
 ```html
